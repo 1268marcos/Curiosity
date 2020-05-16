@@ -1,15 +1,18 @@
+Public class Curiosity {
+
+
 @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "curiosityId")
     private int mId;
 
     @Nullable
-    @ColumnInfo(name = "curiosityName")
+    @ColumnInfo(name = "mCuriosityName")
     private String mCreationDate;
 
     private String mDescription;
 
-    public Museum(@Nullable String creationDate, String description, String howDidYouNow, Int importance) {
+    public Curiosity(@Nullable String creationDate, String description, String howDidYouNow, Int importance) {
         mcreationDate = creationDate;
         mDescription = description;
         mHowDidYouKnow = howDidYouKnow;
@@ -58,5 +61,7 @@
 
     private String mHowDidYouNow;
     private Int mImportance;
+    
+  }
 
 }
