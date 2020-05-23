@@ -1,4 +1,12 @@
-Public class Curiosity {
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "curiosities")
+
+public class Curiosity {
 
 
 @PrimaryKey(autoGenerate = true)
@@ -12,10 +20,10 @@ Public class Curiosity {
 
     private String mDescription;
 
-    public Curiosity(@Nullable String creationDate, String description, String howDidYouNow, Int importance) {
-        mcreationDate = creationDate;
+    public Curiosity(@Nullable String creationDate, String description, String howDidYouNow, int importance) {
+        mCreationDate = creationDate;
         mDescription = description;
-        mHowDidYouKnow = howDidYouKnow;
+        mHowDidYouNow = howDidYouNow;
         mImportance = importance;
     }
 
@@ -28,11 +36,11 @@ Public class Curiosity {
     }
 
     public String getCreationdate() {
-        return mCreationdate;
+        return mCreationDate;
     }
 
     public void setCreationdate(String creationdate) {
-        mCreationdate = creationdate;
+        mCreationDate = creationdate;
     }
 
     public String getDescription() {
@@ -51,17 +59,15 @@ Public class Curiosity {
         mHowDidYouNow = howDidYouNow;
     }
 
-    public Int getImportance() {
+    public int getImportance() {
         return mImportance;
     }
 
-    public void setImportance(Int importance) {
+    public void setImportance(int importance) {
         mImportance = importance;
     }
 
     private String mHowDidYouNow;
-    private Int mImportance;
+    private int mImportance;
     
   }
-
-}
